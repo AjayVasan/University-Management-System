@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<head>
+    <title>Student Login</title>
+    <style>
+        body{
+            background-image: url("C:/Users/kowsh/OneDrive/Desktop/VS Code/Codes/Projects/UMS/login.png");
+            background-repeat: no-repeat;
+            background-size:cover;
+            
+        }
+        .a{
+            border-radius: 7px;
+            background-color: antiquewhite;
+            border: 1px;
+            height: 25px;
+
+        }
+        .layout{
+            display: flex;
+            justify-content: space-around;
+        }
+        .inp{
+            display: grid;
+            grid-template-columns: max-content max-content;
+            column-gap: 10px;
+            row-gap: 33.5px;
+            font-size: 25px;
+        }
+        .inp label{text-align: right;}
+        .center{
+
+            position: fixed;
+            width: 500px;
+            height: 250px;
+            top: 50%;
+            left: 50%;
+            margin-top: -100px; 
+            margin-left: -250px;  
+            font-size: 25px;
+            padding: 20px;
+            box-shadow: 10px rgba(0, 0, 0, 0.4);
+        }
+        .ak{
+            border-radius: 20px;
+            background-color:rgba(255,255,255,.4);
+        }
+        .butt-container{
+            display: flex;
+            justify-content: center;
+        }
+        .butt{
+
+        }
+        option{text-align: center;}
+        button{
+            background-color: #c20018;
+            width: 100px;
+            height: 50px;
+            border-radius: 100px;
+            border: 0px;
+            font-size: 20px;
+        }
+        .img{
+            position: absolute;
+            left: 34%;
+            
+            
+        }
+     </style>
+</head>
+<body>
+    <div class="img"><img src="MIT-Logo.png" height="250px" width="500px"></div>
+    <div class="ak center">
+    <div class="center layout">
+        <form>
+            <div class="inp">
+                <label for="name">Enter Your name:</label>
+                <input type="text" class="a" name="name" id="nid" onkeyup="up(this.id)">
+
+                <label for="rno">Registrtion number:</label>
+                <input type="text" class="a" name="rno" id="rid">
+  
+                <label for="pass">Password:</label>
+                <input type="password" class="a" name="pass" id="pid">
+
+                <label for="">Destination:</label>
+                <div class="dropdown">
+                    <select class="a" style="width: 200px; font-size: 15px; height: 45%">
+                        <option value="">Homepage</option>
+                        <option value="">Dashboard</option>
+                        <option value="">Classroom</option>
+                    </select><br><br>
+                </div>
+            </div>
+
+                <div class="butt-container">
+                    <button type="submit" class="butt">Login</button>
+                </div>
+        </form>
+    </div>
+    </div>
+</body>

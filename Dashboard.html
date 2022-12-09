@@ -1,0 +1,473 @@
+<DOCKTYPE! html>
+<html>
+<head>
+    <title>Student Dashboard</title>
+<style>
+    *{
+        margin: 0%;
+        font-family: "arial";
+    }
+    .topbar{
+        width: 100%;
+        background-color: #f2e8df;
+        opacity:1.3;
+        height: 10%;
+        box-shadow: 0px 4px 8px 0px rgba(0, 0, 0,0.3);
+    }
+    .h{
+        display:flex ;
+        justify-content: space-between;
+
+    }
+    .leftc{
+        display: flex;
+        height: 7%;
+        width: auto;
+        justify-content: left;
+        padding: 10px;
+
+    
+    }
+    .lll{
+        display: grid;
+        grid-template-columns: auto auto;
+        column-gap: 30px;
+    }
+    .a{
+        height: 50px;
+        width: 100%;
+    }
+    .rightc{
+        display: flex;
+        height: 7%;
+        width: 75% ;
+        justify-content: space-between;
+        padding: 0px;
+
+    }
+    .b{
+        color: black;
+        text-decoration: none;
+    }
+    
+    .b:hover{
+        text-decoration: underline black 1px ;
+        font-weight: bold;
+        cursor: pointer;
+
+    }
+    .txt{
+        display: flex;
+        justify-content: space-around;
+        position: left;
+        height: 7%;
+        width: 60%;
+        padding:2.5%;
+
+    }
+    .pic{
+        display: flex;
+        justify-content: space-around;
+        flex-wrap:wrap;
+        height: 7%;
+        width: 20%;
+        padding-right: 2px;
+        padding: 10px;
+        
+    }
+    .p{
+        height: 52px;
+        width: 52px;
+        border-radius: 25px;
+
+
+
+    }
+    .t{
+        text-align: right;
+        padding-top: 7px;
+    
+    }
+    
+    .n{
+        padding-top: 0.1px;
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .main{
+        display: grid;
+        grid-template-columns: max-content max-content;
+        column-gap: 50px;
+        row-gap: 20px;
+        padding: 40px;
+
+
+    }
+    .schedule{
+        background-color: #f2e8df;
+        height: 325px;
+        width: 600px;
+        overflow:auto;
+        white-space: nowrap;
+        border: solid #f2b263 2px;
+        border-radius: 20px;
+        box-shadow: 0px 4px 8px 0px rgba(0, 0, 0,0.3);
+        padding: 20px;
+        padding-top:3px;
+        padding-bottom:3px;
+
+
+    }
+    .schedule2{
+        background-color: #f2e8df;
+        height: 213px;
+        width: 600px;
+        overflow:auto;
+        white-space: nowrap;
+        border: solid #f2b263 2px;
+        border-radius: 20px;
+        box-shadow: 0px 4px 8px 0px rgba(0, 0, 0,0.3);
+        padding: 20px;
+        padding-top:10px;
+        padding-bottom:3px;
+
+
+    }
+    .xxx1{
+        background-color: #f2e8df;
+        height: 220px;
+        width: 220px;
+
+        border: solid #f2b263 2px;
+        border-radius: 20px;
+        box-shadow: 0px 4px 8px 0px rgba(0, 0, 0,0.3);
+        padding: 20px;
+        padding-top:3px;
+        padding-bottom:3px;
+    }
+    .xxx{
+        background-color: #f2e8df;
+        height: 220px;
+        width: 300px;
+        border: solid #f2b263 2px;
+        border-radius: 20px;
+        box-shadow: 0px 4px 8px 0px rgba(0, 0, 0,0.3);
+        padding: 20px;
+        padding-top:3px;
+        padding-bottom:3px;
+    }
+    body{
+        background-color: #f2c6c2;
+        overflow-x: hidden;
+    }
+    .subject{
+        display: flex;
+        flex-direction: column;
+        padding-top: 17px;
+        row-gap: 10px;
+    }
+    .table{
+        width: 100%;
+        border:0px;
+        border-radius: 10px;       
+    }
+    th{
+        padding: 10px;
+        border-top-left-radius:10px;
+        border-bottom-left-radius: 10px;
+        background-color: #86A69D;
+        width: 65%;
+    }
+
+    td{
+        text-align: center;
+        background-color: #f28585;
+        font-size:14px;
+    }
+
+    th,td{
+        box-shadow: 0px 4px 8px 0px rgba(0, 0, 0,0.2);
+    }
+    .c{
+        position:absolute;
+        top:90px;
+        left: 67px;
+        background-color: #f2b263;
+        padding: 9px;
+        border-radius: 50px;
+        font-size: 15px;
+        }
+    .c2{
+        position:absolute;
+        top:90px;
+        left: 760px;
+        background-color: #f2b263;
+        padding: 9px;
+        border-radius: 50px;
+        font-size: 15px;
+    }
+    .c3{
+        position:absolute;
+        top:452px;
+        left: 67px;
+        background-color: #f2b263;
+        padding: 9px;
+        border-radius: 50px;
+        font-size: 15px;
+    }
+    .c4{
+        position:absolute;
+        top:452px;
+        left: 760px;
+        background-color: #f2b263;
+        padding: 9px;
+        border-radius: 50px;
+        font-size: 15px;
+    }
+    .c5{
+        position:absolute;
+        top:452px;
+        left: 1138px;
+        background-color: #f2b263;
+        padding: 9px;
+        border-radius: 50px;
+        font-size: 15px;
+    }
+    .exams{
+        display: grid;
+        grid-template-columns: auto auto;
+        padding-top: 17px;
+        row-gap: 10px;
+        column-gap: 10px;
+    }
+
+    .head{
+        width: 30%;
+    }
+    .head1{
+        width: 50%;
+    }
+
+    .cont{
+        position: relative;
+        top: 49%;
+        left: 47%;
+        font-style: italic;
+        opacity: .8;
+    }
+
+
+</style>
+</head>
+
+<body>
+    <div class="topbar">
+        <div class="h">
+            <div class="leftc">
+                <img src="pic1.png" class="a">
+            </div>
+            <div class="rightc">
+                <div class="txt">
+                    <a href="" class="b"><p>Home</p></a>
+                    <a href="" class="b"><p>Dashboard</p></a>
+                    <a href="" class="b"><p >Classroom</p></a>
+                    <a href="" class="b"><p >Academics</p></a>
+                    <a href="" class="b"><p >Residential</p></a>
+                </div>
+                <div class="pic">
+                    <div class="n">
+                        <p class="t b">1122334455</p>
+                        <p class="t b">Home Lander</p>
+                    </div>
+                    <img src="pic2.jpg" class="p">
+                </div>
+            </div>
+        </div> 
+    </div>
+
+    
+    <label class="c">Today's Schedule</label>
+    <div class="main">
+        <div class="Schedule">
+            <div class="subject">
+                <table class="table" >
+                    <tr>
+                        <th rowspan="2" style="text-align: left;">CSE326: Computer programing laboratary</th>
+                        <td colspan="2" style="border-top-right-radius: 10px;">10 am - 11 pm</td>
+                    </tr>
+                    <tr>
+                        <td>Block-12</td>
+                        <td style="border-bottom-right-radius:10px;">Room-177</td>
+                    </tr>
+                </table>
+                
+                <table class="table" >
+                    <tr>
+                        <th rowspan="2" style="text-align: left;">CSE326: Computer programing laboratary</th>
+                        <td colspan="2" style="border-top-right-radius: 10px;">11 am - 12 pm</td>
+                    </tr>
+                    <tr>
+                        <td>Block-12</td>
+                        <td style="border-bottom-right-radius:10px;">Room-177</td>
+                    </tr>
+                </table>
+                <table class="table" >
+                    <tr>
+                        <th rowspan="2" style="text-align: left;">CSE111: Orentation to computing</th>
+                        <td colspan="2" style="border-top-right-radius: 10px;">1 pm - 2 pm</td>
+                    </tr>
+                    <tr>
+                        <td>Block-15</td>
+                        <td style="border-bottom-right-radius:10px;">Room-247</td>
+                    </tr>
+                </table>
+                <table class="table" >
+                    <tr>
+                        <th rowspan="2" style="text-align: left;">INT108: Python Programing</th>
+                        <td colspan="2" style="border-top-right-radius: 10px;">2 pm - 3 pm</td>
+                    </tr>
+                    <tr>
+                        <td>Block-17</td>
+                        <td style="border-bottom-right-radius:10px;">Room-417</td>
+                    </tr>
+                </table>
+                <table class="table" >
+                    <tr>
+                        <th rowspan="2" style="text-align: left;">MTH174: Engneering Maths</th>
+                        <td colspan="2" style="border-top-right-radius: 10px;">4 pm - 5 pm</td>
+                    </tr>
+                    <tr>
+                        <td>Block-12</td>
+                        <td style="border-bottom-right-radius:10px;">Room-217</td>
+                    </tr>
+                </table>
+                <table class="table" >
+                    <tr>
+                        <th rowspan="2" style="text-align: left;">PHY110: Engneering Physics</th>
+                        <td colspan="2" style="border-top-right-radius: 10px;">5 pm - 6 pm</td>
+                    </tr>
+                    <tr>
+                        <td>Block-14</td>
+                        <td style="border-bottom-right-radius:10px;">Room-317</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="schedule">
+            <div class="exams">
+                <table class="table" >
+                    <tr>
+                        <th rowspan="2" class="head" style="text-align: left;">CSE326</th>
+                        <td>19 Dec</td>
+                        <td style="border-top-right-radius: 10px;">11 am - 12 pm</td>
+                    </tr>
+                    <tr>
+                        <td>Block-12</td>
+                        <td style="border-bottom-right-radius:10px;">Room-177</td>
+                    </tr>
+                </table>
+                <table class="table" >
+                    <tr>
+                        <th rowspan="2" class="head" style="text-align: left;">CSE111</th>
+                        <td>21 Dec</td>
+                        <td style="border-top-right-radius: 10px;">1 pm - 2 pm</td>
+                    </tr>
+                    <tr>
+                        <td>Block-15</td>
+                        <td style="border-bottom-right-radius:10px;">Room-247</td>
+                    </tr>
+                </table>
+                <table class="table" >
+                    <tr>
+                        <th rowspan="2" class="head" style="text-align: left;">INT108</th>
+                        <td>23 Dec</td>
+                        <td style="border-top-right-radius: 10px;">2 pm - 3 pm</td>
+                    </tr>
+                    <tr>
+                        <td>Block-17</td>
+                        <td style="border-bottom-right-radius:10px;">Room-417</td>
+                    </tr>
+                </table>
+                <table class="table" >
+                    <tr>
+                        <th rowspan="2" class="head" style="text-align: left;">MTH174</th>
+                        <td>25 Dec</td>
+                        <td style="border-top-right-radius: 10px;">4 pm - 5 pm</td>
+                    </tr>
+                    <tr>
+                        <td>Block-12</td>
+                        <td style="border-bottom-right-radius:10px;">Room-217</td>
+                    </tr>
+                </table>
+                <table class="table" >
+                    <tr>
+                        <th rowspan="2" class="head" style="text-align: left;">PHY110</th>
+                        <td>29 Dec</td>
+                        <td  style="border-top-right-radius: 10px;">5 pm - 6 pm</td>
+                    </tr>
+                    <tr>
+                        <td>Block-14</td>
+                        <td style="border-bottom-right-radius:10px;">Room-317</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="schedule2">
+            <div class="exams">
+                <table class="table" style="box-shadow: 0px 4px 8px 0px rgba(4, 255, 0, 0.5);">
+                    <tr>
+                        <th rowspan="2" class="head1" style="text-align: left;">100%</th>
+                        <td style="border-top-right-radius: 10px; border-bottom-right-radius: 10px;"><b>CSE326</b></td>
+                    </tr>
+
+                </table>
+                <table class="table" style="box-shadow: 0px 4px 8px 0px rgba(4, 255, 0, 0.5);">
+                    <tr>
+                        <th rowspan="2" class="head1" style="text-align: left;">80%</th>
+                        <td style="border-top-right-radius: 10px; border-bottom-right-radius: 10px;"><b>PHY110</b></td>
+                    </tr>
+                </table>
+                <table class="table" style="box-shadow: 0px 4px 8px 0px rgba(255, 77, 0, 0.5);">
+                    <tr>
+                        <th rowspan="2" class="head1" style="text-align: left;">72%</th>
+                        <td style="border-top-right-radius: 10px; border-bottom-right-radius: 10px;"><b>MTH174</b></td>
+                    </tr>
+                </table>
+                <table class="table" style="box-shadow: 0px 4px 8px 0px rgba(4, 255, 0, 0.5);">
+                    <tr>
+                        <th rowspan="2" class="head1" style="text-align: left;">100%</th>
+                        <td style="border-top-right-radius: 10px; border-bottom-right-radius: 10px;"><b>INT108</b></td>
+                    </tr>
+                </table>
+                <table class="table" style="box-shadow: 0px 4px 8px 0px rgba(4, 255, 0, 0.5);">
+                    <tr>
+                        <th rowspan="2" class="head1" style="text-align: left;">100%</th>
+                        <td style="border-top-right-radius: 10px; border-bottom-right-radius: 10px;"><b>CSE111</b></td>
+                    </tr>
+                </table>
+                <table class="table" style="box-shadow: 0px 4px 8px 0px rgba(255, 0, 0, 0.5);">
+                    <tr>
+                        <th rowspan="2" class="head1" style="text-align: left;">54%</th>
+                        <td style="border-top-right-radius: 10px; border-bottom-right-radius: 10px;"><b>PES318</b></td>
+                    </tr>
+                </table>
+            </div>
+            
+        </div>
+        <div class="lll">
+            <div class="xxx">
+                <p class="cont">Nill</p>
+            </div>
+            <div class="xxx1">
+                <p class="cont">Nill</p>
+            </div>
+        </div>
+
+    </div>
+    
+    <label class="c2">Exams Avalible</label>
+    <label class="c3">Attendance</label>
+    <label class="c4">Events</label>
+    <lable class="c5">Fee Pending</lable>
+</body>
+</html>
